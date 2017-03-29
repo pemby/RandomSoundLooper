@@ -16,7 +16,7 @@ randome_volume_max = 1
 random_volume_min = .1
 
 
-def playBirdSound(lastTimePlayed=0):
+def playRandomSound(lastTimePlayed=0):
 
     target_file = getFiles()
 
@@ -73,5 +73,5 @@ if __name__ == '__main__':
 
 
     while True:
-        playBirdSound()
+        playRandomSound()
 
