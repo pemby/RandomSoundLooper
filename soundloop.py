@@ -7,6 +7,9 @@ import random
 import pygame
 
 
+# Set sound dir from current working dir.
+sound_dir = "sounds"
+
 # Time between calls in seconds.
 min_time_between_calls = 5
 max_time_between_calls = 300
@@ -40,7 +43,7 @@ def setAudioSettings(target_file):
 
 
 def getFiles():
-    target_dir = os.path.join(os.getcwd(), "sounds")
+    target_dir = os.path.join(os.getcwd(), "%s" % sound_dir)
     fileList = os.listdir(target_dir)
     random_randrange = random.randrange(0, len(fileList))
     target_file = os.path.join(target_dir, fileList[random_randrange])
